@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="POST">
+  {% csrf_token %}
+
+  <div class="form-group p-5">
+      <h3 class="pt-3 " style="color: #7c98b1;"> Are you sure you want to delete ?</h3>
+        <button type="submit" class="btn btn-danger mt-5" >Submit</button>
+    </div>
+</form>
+{% endblock %}

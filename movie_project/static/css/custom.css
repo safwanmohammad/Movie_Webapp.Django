@@ -1,0 +1,22 @@
+.body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(23,23,56,1) 32%, rgba(13,13,56,1) 46%, rgba(3,11,17,1) 75%, rgba(6,42,50,1) 100%);
+}
+.a{
+    color:white;
+    text-decoration: none;
+}
+
+whh{
+    width: 200px;
+    height: 100px;
+}
+.btn_show{
+    text-decoration:none;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

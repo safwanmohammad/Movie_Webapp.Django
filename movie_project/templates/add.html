@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" >
+        <form  class="m-5 text-" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group pt-5">
+                <input type="text" name="name" class="form-control" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group pt-5">
+                <input type="text" name="desc" class="form-control" placeholder="Enter your Detailes here">
+            </div>
+            <div class="form-group pt-5">
+                <input type="number" name="price" class="form-control" placeholder="Enter your price">
+            </div>
+            <div class="form-group pt-5">
+                <input type="number" name="year" class="form-control" placeholder="Enter the year">
+            </div>
+            <div class="form-group pt-5">
+                <input type="file" class="form-control" name="img">
+            </div>
+            <div class="form-group pt-5">
+            <button type="submit" class="btn btn-primary" >Submit</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

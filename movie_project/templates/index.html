@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for i in movie_list %}
+        <div class=" col-md-3 ">
+            <div class="card-group">
+            <div class="card bg-black text-white mt-5">
+            <div class="card-body  bg-black"  style="color: #7c98b1;">
+                <img class="card" src="{{i.img.url}}" alt="" style=" height: 250px;    width: -webkit-fill-available;">
+                <div class=" text-center">
+                    <div class=""><h4>{{i.name}}</a></h4></div>
+                    <div class="">
+                        <p class="card-text">{{i.desc}}</p>
+                        <a class="btn_show" href="{% url 'movie_app:datas' i.id %}"><p class="btn btn-secondary">Show items<p></a>
+                        <p class="btn btn-success ">Buy-{{i.price}}$</p>
+                        <p>year_{{i.year}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}
+
+

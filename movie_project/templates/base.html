@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+    <script src="{% static 'js/a076d05399.js' %}"></script>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" rel="stylesheet">
+
+</head>
+{% include 'header.html' %}
+<body style="background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(23,23,56,1) 32%, rgba(13,13,56,1) 46%, rgba(3,11,17,1) 75%, rgba(6,42,50,1) 100%);">
+<div class="container">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg mt-3 " style="background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(23,23,56,1) 32%, rgba(13,13,56,1) 46%, rgba(3,11,17,1) 75%, rgba(6,42,50,1) 100%);">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: #7c98b1;
+    letter-spacing: .2rem;
+    text-transform: uppercase;">Movie</a>
+        <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler "
+                data-bs-target="#navbarNavAltMarkup" data-bs-toggle="collapse" style="border-color: #7c98b1;"
+                type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a aria-current="page" class="nav-link active" href="#" style="color: #7c98b1;
+    letter-spacing: .2rem;
+    text-transform: uppercase;">Home</a>
+                <a class="nav-link" href="{% url 'movie_app:add_movie' %}" style="color: #7c98b1;
+    letter-spacing: .2rem;
+    text-transform: uppercase;"><b>Add_movie</b></a>
+                <a class="nav-link" href="#" style="color: #7c98b1;
+    letter-spacing: .2rem;
+    text-transform: uppercase;">Pricing</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    </div>
+</div>
+{% block content %}
+{% endblock %}
+<div class="container-fluid  mt-5">
+    <div class="row text-center " style="color: #7c98b1;">
+        <p>@copy issued by abc limit</p>
+    </div>
+</div>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

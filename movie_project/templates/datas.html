@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class=" col-md-12 ">
+            <div class="card text-white m-5" style="background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(23,23,56,1) 32%, rgba(13,13,56,1) 46%, rgba(3,11,17,1) 75%, rgba(6,42,50,1) 100%);">
+            <div class="card-body  text-white">
+                <img class="center" src="{{movie.img.url}}" alt="" style=" height:200px;    width: 200px;">
+                <div class=" text-center ">
+                    <div class="p-5">
+                        <h2 class="card-title" style="color: #7c98b1;">{{movie.name}}</h2></div>
+                    <div class="">
+                        <p  style="color: #7c98b1;"> year_{{movie.year}}</p>
+                        <p  style="color: #7c98b1;" class="card-text">{{movie.desc}}</p>
+                        <a  style="color: #7c98b1;" class="btn btn-success"> Buy-{{movie.price}}$</a>
+                        <a href="{% url 'movie_app:update_movie' movie.id %}" class="btn btn-warning ">Update</a>
+                        <a href="{% url 'movie_app:delete_movie' movie.id %}" class="btn btn-danger ">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
